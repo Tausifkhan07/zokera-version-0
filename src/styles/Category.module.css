@@ -1,0 +1,12 @@
+.container {
+  margin: 0 auto;
+  max-width: 1680px;
+  padding: 60px 8px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    padding: 60px 8px 0;
+  }
+}
+ 

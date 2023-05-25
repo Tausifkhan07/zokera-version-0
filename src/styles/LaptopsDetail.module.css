@@ -1,0 +1,55 @@
+.laptopDetail {
+    max-width: 800px;
+    padding: 58px 8px;
+    background: #e5eaf7;
+}
+
+@media only screen and (min-width: 768px) {
+    .bottom-menu {
+      display: none;
+    }
+    .laptopDetail {
+      padding: 70px 22px;
+      min-width: 978px;
+      max-width: 1680px;
+      background: #e5eaf7;
+    }
+    .detailsInner {
+      display: flex;
+      flex-flow: row;
+      width: 100%;
+      justify-content: space-between;
+      border-radius: 5px;
+    }
+    .productInner {
+      width: calc(100% - 300px);
+    }
+    .proBox {
+      display: flex;
+      flex-flow: row;
+      background: #fff;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .slider {
+      align-self: flex-start;
+      width: 45%;
+      position: sticky;
+      top: 99px;
+      bottom: 0;
+      z-index: 2;
+    }
+    .content {
+      width: 55%;
+    }
+    .asideLatest {
+      width: 290px;
+      height: 100%;
+      margin-left: 8px;
+      align-self: flex-start;
+    }
+    .sideBar {
+      background: #fff;
+      box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    }
+}

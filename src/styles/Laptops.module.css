@@ -1,0 +1,17 @@
+.laptopsContainer {
+    max-width: 800px;
+    padding: 58px 8px;
+    background: #e5eaf7;
+}
+
+@media only screen and (min-width: 768px) {
+    .bottom-menu {
+      display: none;
+    }
+    .laptopsContainer {
+      padding: 70px 22px;
+      min-width: 978px;
+      max-width: 1680px;
+      background: #e5eaf7;
+    }
+}

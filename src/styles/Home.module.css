@@ -1,0 +1,58 @@
+.homeBody {
+  max-width: 977px;
+  padding: 58px 8px;
+  background: #e5eaf7;
+}
+.bodyContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+.bannerContainer {
+  display: block;
+  margin-bottom: 10px;
+}
+.bannerContainer .homeBanner, .bannerContainer .newsSection {
+  margin-bottom: 8px;
+}
+.bannerContainer .newsSection {
+  margin-top: 12px;
+}
+.bannerContainer .bannerSlider, .bannerContainer .newsSlider {
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  padding: 5px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .bottom-menu {
+    display: none;
+  }
+  .homeBody {
+    padding: 70px 22px;
+    min-width: 978px;
+    max-width: 1680px;
+    background: #e5eaf7;
+  }
+  .bodyContainer {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .bannerContainer {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(50%, 1fr) );
+    height: 300px;
+    margin-bottom: 10px;
+  }
+  .bannerContainer .homeBanner {
+    padding-right: 6px;
+  }
+  .bannerContainer .newsSection {
+    padding-left: 6px;
+    margin-top: 0;
+  }
+  .productGridCarousel {
+    margin: 25px 0 12px;
+  }
+  
+}
