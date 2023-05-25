@@ -9,8 +9,8 @@ interface SwiperSliderProps {
   images: string[];
 }
 type SwiperController = {
-  goTo(index: number): void;
-};
+    goTo(index: number): void;
+  };
 
 const ThumbLaptSlider: React.FC<SwiperSliderProps> = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | undefined>(undefined);
@@ -28,10 +28,7 @@ const ThumbLaptSlider: React.FC<SwiperSliderProps> = ({ images }) => {
   const swiperParams: SwiperOptions = {
     spaceBetween: 20,
     slidesPerView: 1,
-    thumbs: {
-      swiper: thumbsSwiper,
-      swiperRef: swiperRef,
-    },
+    thumbs: { swiper: thumbsSwiper },
   };
 
   const thumbParams: SwiperOptions = {
@@ -41,7 +38,7 @@ const ThumbLaptSlider: React.FC<SwiperSliderProps> = ({ images }) => {
 
   return (
     <div>
-      <Swiper {...swiperParams}>
+      <Swiper {...swiperParams} ref={swiperRef}>
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <img src={image} alt={`Slide ${index}`} />
