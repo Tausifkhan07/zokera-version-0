@@ -1,7 +1,10 @@
 .laptopDetail {
     max-width: 800px;
     padding: 58px 8px;
-    background: #e5eaf7;
+    /* background: #e5eaf7; */
+}
+.content {
+  padding: 0 7px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -33,14 +36,16 @@
     }
     .slider {
       align-self: flex-start;
-      width: 45%;
+      width: 40%;
       position: sticky;
       top: 99px;
       bottom: 0;
       z-index: 2;
     }
     .content {
-      width: 55%;
+      width: 60%;
+      border-left: 1px solid rgba(0,0,0,.1);
+      padding: 15px;
     }
     .asideLatest {
       width: 290px;

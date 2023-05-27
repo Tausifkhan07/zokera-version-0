@@ -9,8 +9,8 @@ interface SwiperSliderProps {
   images: string[];
 }
 type SwiperController = {
-    goTo(index: number): void;
-  };
+  goTo(index: number): void;
+};
 
 const ThumbLaptSlider: React.FC<SwiperSliderProps> = ({ images }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | undefined>(undefined);
@@ -26,33 +26,74 @@ const ThumbLaptSlider: React.FC<SwiperSliderProps> = ({ images }) => {
   };
 
   const swiperParams: SwiperOptions = {
-    spaceBetween: 20,
+    spaceBetween: 12,
     slidesPerView: 1,
-    thumbs: { swiper: thumbsSwiper },
+    thumbs: { swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }
   };
 
   const thumbParams: SwiperOptions = {
-    spaceBetween: 20,
-    slidesPerView: 1,
+    spaceBetween: 10,
+    slidesPerView: 4,
   };
 
   return (
-    <div>
-      <Swiper {...swiperParams} ref={swiperRef}>
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <img src={image} alt={`Slide ${index}`} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <Swiper {...thumbParams} onSwiper={setThumbsSwiper}>
-        {images.map((image, index) => (
-          <SwiperSlide key={index} onClick={() => handleThumbClick(index)}>
-            <img src={image} alt={`Thumb ${index}`} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <>
+      <style jsx>{`
+    .laptop-thum-sider {
+      padding: 12px;
+    }
+    .laptop-thum-sider ._img-slide {
+      width: 100%;
+      height: 385px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .laptop-thum-sider ._img-slide ._img {
+      width: 100%;
+      height: 380px;
+      object-fit: contain;
+    }
+    .laptop-thum-sider ._thumb-slide {
+      width: 100px;
+      height: 100px;
+      padding: 10px 6px;
+    }
+    .laptop-thum-sider ._thumb-slide ._thumb_img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 3px;
+      border: 1px solid rgba(0,0,0,.1);
+      border-radius: 4px;
+    }
+    .laptop-thum-sider .swiper-slide-active ._thumb_img {
+      border-color: #00518f;
+    }
+    `}</style>
+
+      <div className='laptop-thum-sider'>
+        <Swiper {...swiperParams} ref={swiperRef}>
+          {images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <div className="_img-slide">
+                <img className='_img' src={image} alt={`Slide ${index}`} />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <Swiper {...thumbParams} onSwiper={setThumbsSwiper}>
+          {images.map((image, index) => (
+            <SwiperSlide key={index} onClick={() => handleThumbClick(index)}>
+              <div className="_thumb-slide">
+                <img className='_thumb_img' src={image} alt={`Thumb ${index}`} />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </>
   );
 };
 
