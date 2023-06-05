@@ -12,8 +12,8 @@ const CommanBtn: React.FC<ButtonProps> = ({ LinkTitle, LinkUrl }) => {
         <>
         <style jsx>{`
         .see-detail {
-            font-size: 13px;
-            font-weight: 500;
+            font-size: 15px;
+            font-weight: 600;
             color: #ff662a;
             display: flex;
             justify-content: center;

@@ -81,16 +81,20 @@ const MobLaptopListing = () => {
      .laptop-container .inner-box .right .review-star {
         margin-bottom: 8px;
      }
-     .laptop-container .inner-box .right .review-star .icon {
-        font-size: 13px;
-        color: #03753c;
-        padding: 3px 3px;
-        background: #e5f7ee;
-     }
-     .laptop-container .inner-box .right .review-star .numb {
-        font-size: 15px;
-        padding: 1px 7px;
-     }
+     .laptop-container .inner-box .right .review-star {
+        background: #03753c;
+        color: #fff;
+        padding: 2px 5px;
+        font-size: 14px;
+        font-weight: 600;
+        max-width: 55px;
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 2px;
+      }
      .laptop-container .inner-box .right .key-point .icon {
       color: #00518f;
       margin-right: 7px;
@@ -155,12 +159,7 @@ const MobLaptopListing = () => {
                     <Link href="/laptops/laptopDetail">SAMSUNG Galaxy Book 2 Core i5 12th Gen - 8 GB/512 GB</Link>
                     </div>
                     <div className="review-star">
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarHalf /></span>
-                        <span className="numb">(1508)</span>
+                        <span className="numb">4.5</span><BsStarFill />
                     </div>
                     <div className="price-buy">
                         <span className="price">₹33990</span>
@@ -230,12 +229,7 @@ const MobLaptopListing = () => {
                     <Link href="/laptops/laptopDetail">SAMSUNG Galaxy Book 2 Core i5 12th Gen - 8 GB/512 GB</Link>
                     </div>
                     <div className="review-star">
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarHalf /></span>
-                        <span className="numb">(1508)</span>
+                        <span className="numb">4.5</span><BsStarFill />
                     </div>
                     <div className="price-buy">
                         <span className="price">₹33990</span>
@@ -305,12 +299,7 @@ const MobLaptopListing = () => {
                     <Link href="/laptops/laptopDetail">SAMSUNG Galaxy Book 2 Core i5 12th Gen - 8 GB/512 GB</Link>
                     </div>
                     <div className="review-star">
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarHalf /></span>
-                        <span className="numb">(1508)</span>
+                        <span className="numb">4.5</span><BsStarFill />
                     </div>
                     <div className="price-buy">
                         <span className="price">₹33990</span>
@@ -380,87 +369,7 @@ const MobLaptopListing = () => {
                     <Link href="/laptops/laptopDetail">SAMSUNG Galaxy Book 2 Core i5 12th Gen - 8 GB/512 GB</Link>
                     </div>
                     <div className="review-star">
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarHalf /></span>
-                        <span className="numb">(1508)</span>
-                    </div>
-                    <div className="price-buy">
-                        <span className="price">₹33990</span>
-                        <img className="provider" src="/laptops/amazon-icon-logo.png" alt="amazon" />
-                        <span className="buy">
-                            <Link href="#" target="_blank">Buy</Link>
-                        </span>
-                    </div>
-                    <ul className="key-point">
-                        <li>
-                            <span className="icon">
-                                <GiProcessor />
-                            </span>
-                            <span className="name">
-                            Intel Celeron N4500, 2.8 Ghz Processor
-                            </span>
-                        </li>
-                        <li>
-                            <span className="icon">
-                                <AiOutlineDatabase />
-                            </span>
-                            <span className="name">8 GB DDR4 RAM | 32 GB Expandable</span>
-                        </li>
-                        <li>
-                            <span className="icon">
-                                <MdOutlineSdStorage />
-                            </span>
-                            <span className="name">256 GB SSD Storage</span>
-                        </li>
-                        <li>
-                            <span className="icon">
-                                <MdOutlineDesktopAccessDisabled />
-                            </span>
-                            <span className="name">15.6″ (39.62 cm) Display</span>
-                        </li>
-                        <li>
-                            <span className="icon">
-                                <GiComputerFan />
-                            </span>
-                            <span className="name">AMD Radeon Graphic Processor</span>
-                        </li>
-                        <li>
-                            <span className="icon">
-                                <MdBatteryCharging30 />
-                            </span>
-                            <span className="name">65W Adapter</span>
-                        </li>
-                    </ul>
-                    <div className="see-details">
-                        <CommanBtn LinkTitle='See Details' LinkUrl='/laptops/laptopDetail' />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="product-inner">
-            <div className="inner-box">
-                <div className="left">
-                    <div className="img-box">
-                        <Link href="/laptops/laptopDetail">
-                        <img className="img" src="/laptops/laptop-img.webp" alt="laptop" />
-                        </Link>
-                    </div>
-                    <button className="compare">+ Compare</button>
-                </div>
-                <div className="right">
-                    <div className="title">
-                    <Link href="/laptops/laptopDetail">SAMSUNG Galaxy Book 2 Core i5 12th Gen - 8 GB/512 GB</Link>
-                    </div>
-                    <div className="review-star">
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarFill /></span>
-                        <span className="icon"><BsStarHalf /></span>
-                        <span className="numb">(1508)</span>
+                        <span className="numb">4.5</span><BsStarFill />
                     </div>
                     <div className="price-buy">
                         <span className="price">₹33990</span>

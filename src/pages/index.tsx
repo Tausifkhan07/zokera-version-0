@@ -12,6 +12,9 @@ import DeskProductGridCarousel from '../../components/desktop/DeskProductGridCar
 import MobProductGridCarousel from '../../components/mobile/MobProductGridCarousel';
 import DeskProductCarousel from '../../components/desktop/DeskProductCarousel';
 import MobProductCarousel from '../../components/mobile/MobProductCarousel';
+import ProdImageCarousel from '../../components/comman/ProdImageCarousel';
+import ProdImageGrid from '../../components/comman/ProdImageGrid';
+import CategorySlider from '../../components/comman/CategorySlider';
 
 export default function Home() {
 
@@ -76,6 +79,10 @@ export default function Home() {
           <section className={styles.productCarousel}>
             <ResponsiveComponent Mobile={<MobProductCarousel />} Desktop={<DeskProductCarousel BtnProps="laptop-btn-custom" />} />
           </section>
+          <section className={styles.imgCarousel}>
+              <ResponsiveComponent Mobile={<ProdImageGrid />} Desktop={<ProdImageCarousel />} />
+          </section>
+          <CategorySlider />
         </div>
       </div>
       {/* home body end  */}

@@ -38,7 +38,7 @@ const DeskLaptopListing: React.FC = () => {
           }
           .desk-lapt-cont .laptop-inner {
             background: #fff;
-            box-shadow: 0 0 5px -1px rgba(0,0,0,.3);
+            box-shadow: 0 1px 3px rgba(0,0,0,.18), 0 1px 1px 0 rgba(0,0,0,.17);
             border-radius: 6px;
             margin: 0 5px 10px;
             overflow: hidden;
@@ -94,15 +94,19 @@ const DeskLaptopListing: React.FC = () => {
             align-items: center;
             margin-bottom: 8px;
           }
-          .desk-lapt-cont .laptop-inner .inner-box .right .reting-price .reting .icon {
-            font-size: 13px;
-            color: #03753c;
-            padding: 3px 3px;
-            background: #e5f7ee;
-          }
-          .desk-lapt-cont .laptop-inner .inner-box .right .reting-price .reting .numb {
-            font-size: 15px;
-            padding: 1px 7px;
+          .desk-lapt-cont .laptop-inner .inner-box .right .reting-price .reting {
+            background: #03753c;
+            color: #fff;
+            padding: 2px 5px;
+            font-size: 14px;
+            font-weight: 600;
+            max-width: 55px;
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 2px;
           }
           .desk-lapt-cont .laptop-inner .inner-box .right .reting-price .price-box .price {
             color: #ff662a;
@@ -199,12 +203,7 @@ const DeskLaptopListing: React.FC = () => {
                         </div>
                         <div className="reting-price">
                             <div className="reting">
-                                <span className="icon"><BsStarFill /></span>
-                                <span className="icon"><BsStarFill /></span>
-                                <span className="icon"><BsStarFill /></span>
-                                <span className="icon"><BsStarFill /></span>
-                                <span className="icon"><BsStarHalf /></span>
-                                <span className="numb">(1508)</span>
+                                <span>4.5</span><BsStarFill />
                             </div>
                             <div className="price-box">
                                   <Link href="#">
@@ -259,7 +258,7 @@ const DeskLaptopListing: React.FC = () => {
                 <div className="inner-box">
                     <div className="left">
                        <div className="img-box">
-                            <Link href="#">
+                            <Link href="/laptops/laptopDetail">
                                 <img src="/laptops/laptop-img.webp" alt="laptop" />
                             </Link>
                        </div>
@@ -267,16 +266,11 @@ const DeskLaptopListing: React.FC = () => {
                     </div>
                     <div className="right">
                         <div className="title">
-                            <Link href="#">SAMSUNG Galaxy Book 2 Core i5 12th Gen - 8 GB/512 GB</Link>
+                            <Link href="/laptops/laptopDetail">SAMSUNG Galaxy Book 2 Core i5 12th Gen - 8 GB/512 GB</Link>
                         </div>
                         <div className="reting-price">
                             <div className="reting">
-                                <span className="icon"><BsStarFill /></span>
-                                <span className="icon"><BsStarFill /></span>
-                                <span className="icon"><BsStarFill /></span>
-                                <span className="icon"><BsStarFill /></span>
-                                <span className="icon"><BsStarHalf /></span>
-                                <span className="numb">(1508)</span>
+                                <span>4.5</span><BsStarFill />
                             </div>
                             <div className="price-box">
                                   <Link href="#">
@@ -320,6 +314,7 @@ const DeskLaptopListing: React.FC = () => {
                                 <span className="name">65W Adapter</span>
                             </li>
                         </ul>
+
                         <div className="see-detail">
                           <CommanBtn LinkTitle='See Details' LinkUrl='/laptops/laptopDetail' />
                         </div>
@@ -330,7 +325,7 @@ const DeskLaptopListing: React.FC = () => {
                 <div className="inner-box">
                     <div className="left">
                        <div className="img-box">
-                            <Link href="#">
+                            <Link href="/laptops/laptopDetail">
                                 <img src="/laptops/laptop-img.webp" alt="laptop" />
                             </Link>
                        </div>
@@ -338,16 +333,11 @@ const DeskLaptopListing: React.FC = () => {
                     </div>
                     <div className="right">
                         <div className="title">
-                            <Link href="#">SAMSUNG Galaxy Book 2 Core i5 12th Gen - 8 GB/512 GB</Link>
+                            <Link href="/laptops/laptopDetail">SAMSUNG Galaxy Book 2 Core i5 12th Gen - 8 GB/512 GB</Link>
                         </div>
                         <div className="reting-price">
                             <div className="reting">
-                                <span className="icon"><BsStarFill /></span>
-                                <span className="icon"><BsStarFill /></span>
-                                <span className="icon"><BsStarFill /></span>
-                                <span className="icon"><BsStarFill /></span>
-                                <span className="icon"><BsStarHalf /></span>
-                                <span className="numb">(1508)</span>
+                                <span>4.5</span><BsStarFill />
                             </div>
                             <div className="price-box">
                                   <Link href="#">
@@ -391,6 +381,7 @@ const DeskLaptopListing: React.FC = () => {
                                 <span className="name">65W Adapter</span>
                             </li>
                         </ul>
+
                         <div className="see-detail">
                           <CommanBtn LinkTitle='See Details' LinkUrl='/laptops/laptopDetail' />
                         </div>

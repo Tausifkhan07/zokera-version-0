@@ -12,7 +12,7 @@ SwiperCore.use([Navigation, Grid]);
 const DeskProductGridCarousel: React.FC = () => {
   const swiperParams: SwiperOptions = {
     // slidesPerView: 3,
-    spaceBetween: 30,
+    spaceBetween: 20,
     // loop: false,
     // pagination: false,
     // grid: {
@@ -59,8 +59,8 @@ const DeskProductGridCarousel: React.FC = () => {
       top: 50%;
       transform: translateY(-50%);
       width: 40px;
-      height: 60px;
-      background-color: rgba(255, 255, 255, .8);
+      height: 40px;
+      background: #fff;
       color: #ff662a;
       font-size: 35px;
       text-align: center;
@@ -69,36 +69,32 @@ const DeskProductGridCarousel: React.FC = () => {
       align-items: center;
       cursor: pointer;
       z-index: 9;
-      opacity: 1;
-      visibility: visible;
-      transition: background .3s;
+      display: block;
+      border-radius: 20px;
+      border: 1px solid transparent;
     }
     .prod-grid-swiper-button:hover {
-      background: #fff;
+        border: 1px solid #00518f;
     }
     .prod-grid-swiper-button.swiper-button-disabled {
-      opacity: 0;
-      visibility: hidden;
+      display: none;
     }
     .prod-grid-swiper-button-prev {
       left: 0;
-      border-top-right-radius: 5px;
-      box-shadow: 2px 0 10px rgba(0,0,0,.2);
-      border-bottom-right-radius: 5px;
+      box-shadow: 2px 2px 12px rgba(0,0,0,.3);
     }
     .prod-grid-swiper-button-next {
       right: 0;
-      box-shadow: -2px 0 10px rgba(0,0,0,.2);
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
+      box-shadow: -2px 2px 12px rgba(0,0,0,.3);
     }
     .product-grid-box {
         background: #fff;
         padding: 15px;
         border-radius: 5px;
-        box-shadow: 1px 1px 5px rgba(0,0,0,.2);
+        box-shadow: 0 1px 3px rgba(0,0,0,.18), 0 1px 1px 0 rgba(0,0,0,.17);
         width: 100%;
         height: 100%;
+        margin-bottom: 2px;
     }
     .product-grid-box .product-inner-box {
         width: 100%;

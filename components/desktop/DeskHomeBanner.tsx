@@ -22,7 +22,7 @@ const DeskHomeBanner: React.FC<DeskBannerProps> = ({ DeskBannerImg }) => {
   const swiperOptions: SwiperOptions = {
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 5000,
     },
     pagination: {
       clickable: true,
@@ -41,7 +41,7 @@ const DeskHomeBanner: React.FC<DeskBannerProps> = ({ DeskBannerImg }) => {
         top: 50%;
         transform: translateY(-50%);
         width: 40px;
-        height: 60px;
+        height: 40px;
         background-color: rgba(255, 255, 255, .8);
         color: #ff662a;
         font-size: 35px;
@@ -52,21 +52,22 @@ const DeskHomeBanner: React.FC<DeskBannerProps> = ({ DeskBannerImg }) => {
         cursor: pointer;
         z-index: 9;
         transition: background .3s;
+        border-radius: 20px;
+        opacity: .8;
+        border: 1px solid transparent;
       }
       .custom-swiper-button:hover {
         background: #fff;
+        opacity: 1;
+        border: 1px solid #00518f;
       }
       .custom-swiper-button-prev {
         left: 0;
-        border-top-right-radius: 5px;
-        box-shadow: 2px 0 10px rgba(0,0,0,.2);
-        border-bottom-right-radius: 5px;
+        box-shadow: 2px 2px 12px rgba(0,0,0,.3);
       }
       .custom-swiper-button-next {
         right: 0;
-        box-shadow: -2px 0 10px rgba(0,0,0,.2);
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
+        box-shadow: -2px 2px 12px rgba(0,0,0,.3);
       }
       @media only screen and (max-width: 767px) {
         .desk-home-banner {

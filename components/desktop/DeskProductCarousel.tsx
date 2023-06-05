@@ -18,25 +18,26 @@ const DeskProductCarousel: React.FC<ProductCarouselProps> = ({ BtnProps }) => {
     breakpoints: {
         800: {
           slidesPerView: 2.6,
-          spaceBetween: 20,
+
         }, 
         900: {
           slidesPerView: 2.8,
-          spaceBetween: 20,
+
         }, 
         1000: {
           slidesPerView: 3.3,
-          spaceBetween: 20,
+
         }, 
         1100: {
           slidesPerView: 3.8,
-          spaceBetween: 30,
+
         }, 
         1200: {
           slidesPerView: 4,
-          spaceBetween: 30,
+
         }, 
       },
+      spaceBetween: 20,
     navigation: {
       prevEl: `.${BtnProps}-swiper-button-prev`,
       nextEl: `.${BtnProps}-swiper-button-next`,
@@ -51,7 +52,7 @@ const DeskProductCarousel: React.FC<ProductCarouselProps> = ({ BtnProps }) => {
       top: 50%;
       transform: translateY(-50%);
       width: 40px;
-      height: 60px;
+      height: 40px;
       background-color: rgba(255, 255, 255, .8);
       color: #ff662a;
       font-size: 35px;
@@ -61,35 +62,32 @@ const DeskProductCarousel: React.FC<ProductCarouselProps> = ({ BtnProps }) => {
       align-items: center;
       cursor: pointer;
       z-index: 9;
-      opacity: 1;
-      visibility: visible;
-      transition: background .3s;
+      border-radius: 20px;
+      display: block;
+      border: 1px solid transparent;
     }
     .${BtnProps}-swiper-button:hover {
       background: #fff;
+      border: 1px solid #00518f;
     }
     .${BtnProps}-swiper-button.swiper-button-disabled {
-      opacity: 0;
-      visibility: hidden;
+      display: none;
     }
     .${BtnProps}-swiper-button-prev {
       left: 0;
-      border-top-right-radius: 5px;
-      box-shadow: 2px 0 10px rgba(0,0,0,.2);
-      border-bottom-right-radius: 5px;
+      box-shadow: 2px 2px 12px rgba(0,0,0,.3);
     }
     .${BtnProps}-swiper-button-next {
       right: 0;
-      box-shadow: -2px 0 10px rgba(0,0,0,.2);
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
+      box-shadow: -2px 2px 12px rgba(0,0,0,.3);
     }
     .pro-item-inner-box {
       background: #fff;
       padding: 8px 12px;
-      box-shadow: 0 2px 5px rgba(0,0,0,.2);
+      box-shadow: 0 1px 3px rgba(0,0,0,.18), 0 1px 1px 0 rgba(0,0,0,.17);
       border-radius: 2px;
       overflow: hidden;
+      margin-bottom: 2px;
     }
     .pro-item-inner-box .inner-item .img-box {
       height: 150px;
@@ -464,7 +462,7 @@ const DeskProductCarousel: React.FC<ProductCarouselProps> = ({ BtnProps }) => {
         </div>
       </SwiperSlide>
     </Swiper>
-    <div className={`${BtnProps}-swiper-button ${BtnProps}-swiper-button-prev`}>{<MdOutlineKeyboardArrowLeft />}</div>
+        <div className={`${BtnProps}-swiper-button ${BtnProps}-swiper-button-prev`}>{<MdOutlineKeyboardArrowLeft />}</div>
         <div className={`${BtnProps}-swiper-button ${BtnProps}-swiper-button-next`}>{<MdOutlineKeyboardArrowRight />}</div>
     </div>
     </>
