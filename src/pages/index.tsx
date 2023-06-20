@@ -15,8 +15,20 @@ import MobProductCarousel from '../../components/mobile/MobProductCarousel';
 import ProdImageCarousel from '../../components/comman/ProdImageCarousel';
 import ProdImageGrid from '../../components/comman/ProdImageGrid';
 import CategorySlider from '../../components/comman/CategorySlider';
+import { useState } from 'react';
+import { GetServerSideProps } from 'next';
+import axios from 'axios';
+import cheerio from 'cheerio';
+import Scraper from '../../components/Scraper';
 
-export default function Home() {
+interface ScraperProps {
+  flipkartPrice: string | null;
+  ProdUrl: string;
+}
+
+
+export default function Home({ flipkartPrice, ProdUrl }: ScraperProps) {
+  // const [flipkartPriceState] = useState(flipkartPrice);
 
   const mobBannerImg = [
     {
@@ -84,9 +96,40 @@ export default function Home() {
           </section>
           <CategorySlider />
         </div>
+        {/* <button onClick={handleScrape}>Scrap Data</button> */}
+        {/* <Scraper /> */}
+        <Scraper ProdUrl={ProdUrl} flipkartPrice={flipkartPrice} />
       </div>
+      
       {/* home body end  */}
       <ResponsiveComponent Mobile={<BottomNav />} Desktop={null} />
     </>
   )
 }
+
+const ProdUrl =
+  'https://www.flipkart.com/red-tape-solid-men-round-neck-blue-t-shirt/p/itm30bdb68df2cf9?pid=TSHGM6QFZVKKMPYB&lid=LSTTSHGM6QFZVKKMPYBY8IXRM&marketplace=FLIPKART&store=clo%2Fash%2Fank%2Fedy&srno=b_1_2&otracker=hp_rich_navigation_2_1.navigationCard.RICH_NAVIGATION_Fashion~Men%2527s%2BTop%2BWear~Men%2527s%2BT-Shirts_IF56C41VGEYS&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L2_view-all&fm=organic&iid=en_f2ViGtqKyVXzDNl2ay5BM%2BdxKw89%2BtzbpZxkmah6sorKrMOqF0rKZolLSxYQD9qTfSsSz%2Fo8it%2FY35cwYWVpjA%3D%3D&ppt=browse&ppn=browse&ssid=4t4mmcta2o0000001687269057878';
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  try {
+    const response = await fetch(ProdUrl);
+    const html = await response.text();
+    const $ = cheerio.load(html);
+    const flipkartPrice = $('._30jeq3._16Jk6d').text().trim();
+
+    return {
+      props: {
+        flipkartPrice,
+        ProdUrl,
+      },
+    };
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return {
+      props: {
+        flipkartPrice: null,
+        ProdUrl,
+      },
+    };
+  }
+};
