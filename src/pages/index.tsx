@@ -20,6 +20,7 @@ import { GetServerSideProps } from 'next';
 import axios from 'axios';
 import cheerio from 'cheerio';
 import Scraper from '../../components/Scraper';
+import DemoScrapper from '../../components/DemoScrapper';
 
 interface ScraperProps {
   flipkartPrice: string | null;
@@ -98,8 +99,9 @@ export default function Home({ flipkartPrice, ProdUrl }: ScraperProps) {
         </div>
         {/* <button onClick={handleScrape}>Scrap Data</button> */}
         {/* <Scraper /> */}
-        <Scraper ProdUrl={ProdUrl} flipkartPrice={flipkartPrice} />
+        {/* <Scraper ProdUrl={ProdUrl} flipkartPrice={flipkartPrice} /> */}
       </div>
+      <DemoScrapper />
       
       {/* home body end  */}
       <ResponsiveComponent Mobile={<BottomNav />} Desktop={null} />
@@ -107,29 +109,29 @@ export default function Home({ flipkartPrice, ProdUrl }: ScraperProps) {
   )
 }
 
-const ProdUrl =
-  'https://www.flipkart.com/red-tape-solid-men-round-neck-blue-t-shirt/p/itm30bdb68df2cf9?pid=TSHGM6QFZVKKMPYB&lid=LSTTSHGM6QFZVKKMPYBY8IXRM&marketplace=FLIPKART&store=clo%2Fash%2Fank%2Fedy&srno=b_1_2&otracker=hp_rich_navigation_2_1.navigationCard.RICH_NAVIGATION_Fashion~Men%2527s%2BTop%2BWear~Men%2527s%2BT-Shirts_IF56C41VGEYS&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L2_view-all&fm=organic&iid=en_f2ViGtqKyVXzDNl2ay5BM%2BdxKw89%2BtzbpZxkmah6sorKrMOqF0rKZolLSxYQD9qTfSsSz%2Fo8it%2FY35cwYWVpjA%3D%3D&ppt=browse&ppn=browse&ssid=4t4mmcta2o0000001687269057878';
+// const ProdUrl =
+//   'https://www.flipkart.com/tundwal-s-solid-double-comforter-mild-winter/p/itmc9692d3839d7c?pid=BLAGFFJZHZK2ZBYA&lid=LSTBLAGFFJZHZK2ZBYAESOEMK&marketplace=FLIPKART&fm=productRecommendation%2FattachForSwatchProducts&iid=R%3Aas%3Bp%3AMATGK3BKHCS25U6G%3Bl%3ALSTMATGK3BKHCS25U6GXXN9TL%3Bpt%3App%3Buid%3Ab7d24406-0f73-11ee-9025-4ff28ce42c6a%3B.BLAGFFJZHZK2ZBYA&ssid=i4zr0vrzxs0000001687270026546&otracker=pp_reco_Frequently%2BBought%2BTogether_1_Frequently%2BBought%2BTogether_BLAGFFJZHZK2ZBYA_productRecommendation%2FattachForSwatchProducts_1&otracker1=pp_reco_PINNED_productRecommendation%2FattachForSwatchProducts_Frequently%2BBought%2BTogether_NA_productCard_cc_1_NA_view-all&cid=BLAGFFJZHZK2ZBYA';
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  try {
-    const response = await fetch(ProdUrl);
-    const html = await response.text();
-    const $ = cheerio.load(html);
-    const flipkartPrice = $('._30jeq3._16Jk6d').text().trim();
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   try {
+//     const response = await fetch(ProdUrl);
+//     const html = await response.text();
+//     const $ = cheerio.load(html);
+//     const flipkartPrice = $('._30jeq3._16Jk6d').text().trim();
 
-    return {
-      props: {
-        flipkartPrice,
-        ProdUrl,
-      },
-    };
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    return {
-      props: {
-        flipkartPrice: null,
-        ProdUrl,
-      },
-    };
-  }
-};
+//     return {
+//       props: {
+//         flipkartPrice,
+//         ProdUrl,
+//       },
+//     };
+//   } catch (error) {
+//     console.error('Error fetching data:', error);
+//     return {
+//       props: {
+//         flipkartPrice: null,
+//         ProdUrl,
+//       },
+//     };
+//   }
+// };
