@@ -27,7 +27,6 @@ interface ScraperProps {
   ProdUrl: string;
 }
 
-
 export default function Home({ flipkartPrice, ProdUrl }: ScraperProps) {
   // const [flipkartPriceState] = useState(flipkartPrice);
 
@@ -101,7 +100,7 @@ export default function Home({ flipkartPrice, ProdUrl }: ScraperProps) {
         {/* <Scraper /> */}
         {/* <Scraper ProdUrl={ProdUrl} flipkartPrice={flipkartPrice} /> */}
       </div>
-      <DemoScrapper />
+      <DemoScrapper productLink="https://www.flipkart.com/canon-g3012-multi-function-wifi-color-inkjet-printer-color-page-cost-0-21-rs-black-0-09-borderless-printing/p/itmf2qc6hhx4pkua?pid=PRNF2QC6BX5M9NAJ&lid=LSTPRNF2QC6BX5M9NAJAEQIGZ&marketplace=FLIPKART&store=6bo%2Ftia%2Fffn%2Ft64&spotlightTagId=BestsellerId_6bo%2Ftia%2Fffn%2Ft64&srno=b_1_6&otracker=browse&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L2_view-all&fm=organic&iid=025dd79d-172e-46a2-86df-1842fde7a761.PRNF2QC6BX5M9NAJ.SEARCH&ppt=browse&ppn=browse" />
       
       {/* home body end  */}
       <ResponsiveComponent Mobile={<BottomNav />} Desktop={null} />

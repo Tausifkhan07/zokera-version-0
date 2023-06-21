@@ -1,12 +1,16 @@
 import { useEffect, useState } from 'react';
 
-export default function DemoScrapper() {
-  const [price, setPrice] = useState<string | null>('');
+interface DemoScrapperProps {
+  productLink: string;
+}
+
+export default function DemoScrapper({ productLink }: DemoScrapperProps) {
+  const [price, setPrice] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/scrape');
+        const response = await fetch(`/api/scrape?productLink=${encodeURIComponent(productLink)}`);
         const data = await response.json();
 
         if (response.ok) {
@@ -21,7 +25,7 @@ export default function DemoScrapper() {
     };
 
     fetchData();
-  }, []);
+  }, [productLink]);
 
   return (
     <div>
