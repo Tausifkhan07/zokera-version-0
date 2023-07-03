@@ -100,7 +100,8 @@ export default function Home({ flipkartPrice, ProdUrl }: ScraperProps) {
         {/* <Scraper /> */}
         {/* <Scraper ProdUrl={ProdUrl} flipkartPrice={flipkartPrice} /> */}
       </div>
-      <DemoScrapper productLink="https://www.flipkart.com/canon-g3012-multi-function-wifi-color-inkjet-printer-color-page-cost-0-21-rs-black-0-09-borderless-printing/p/itmf2qc6hhx4pkua?pid=PRNF2QC6BX5M9NAJ&lid=LSTPRNF2QC6BX5M9NAJAEQIGZ&marketplace=FLIPKART&store=6bo%2Ftia%2Fffn%2Ft64&spotlightTagId=BestsellerId_6bo%2Ftia%2Fffn%2Ft64&srno=b_1_6&otracker=browse&otracker1=hp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L2_view-all&fm=organic&iid=025dd79d-172e-46a2-86df-1842fde7a761.PRNF2QC6BX5M9NAJ.SEARCH&ppt=browse&ppn=browse" />
+      <DemoScrapper cssSelector="._30jeq3._16Jk6d" productLink="https://www.flipkart.com/samsung-galaxy-book2-core-i5-12th-gen-16-gb-512-gb-ssd-windows-11-home-np750xed-kc3in-thin-light-laptop/p/itmefc44b5cae8a4?pid=COMGE82N4NN5FGHC&lid=LSTCOMGE82N4NN5FGHCXFRFSS&marketplace=FLIPKART&q=samsung+laptop&store=6bo%2Fb5g&spotlightTagId=FkPickId_6bo%2Fb5g&srno=s_1_3&otracker=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&otracker1=AS_QueryStore_OrganicAutoSuggest_1_11_na_na_na&fm=search-autosuggest&iid=586d156a-68c6-4a30-a7fd-c86232e130c0.COMGE82N4NN5FGHC.SEARCH&ppt=sp&ppn=sp&ssid=69aeohkfjh3x6c5c1687651378476&qH=af4522800d2749f5" />
+      <DemoScrapper cssSelector=".a-price-whole" productLink="https://www.amazon.in/John-Karsun-Mens-Formal-Shoes/dp/B08VH8JPNS/?_encoding=UTF8&pd_rd_w=279TC&content-id=amzn1.sym.5e4a35ae-3279-4dea-a0e4-1f5e54a0b2da&pf_rd_p=5e4a35ae-3279-4dea-a0e4-1f5e54a0b2da&pf_rd_r=A2QW1XBFFKRRZ0VFPZYX&pd_rd_wg=gHBzG&pd_rd_r=e5d2758f-5347-45c5-9566-ae30f7436e10&ref_=pd_gw_GW_ko_reftag" />
       
       {/* home body end  */}
       <ResponsiveComponent Mobile={<BottomNav />} Desktop={null} />

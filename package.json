@@ -28,6 +28,11 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "swiper": "^9.3.1",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "xmldom": "^0.6.0",
+    "xpath": "^0.0.32"
+  },
+  "devDependencies": {
+    "@types/xmldom": "^0.1.31"
   }
 }
